@@ -5,7 +5,6 @@ const buildEslintCommand = (filenames) => [
     .map((f) => path.relative(process.cwd(), f))
     .join(' --file ')} `,
   `prettier --write "{pages,components}/**/*.{ts,tsx,json,scss,md}"`,
-  // `prettier --write "components/**/*.{ts,tsx,json,scss,md}"`,
   `prettier --write "*.{js,json,md}"`,
 ];
 
