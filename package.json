@@ -7,7 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier -c --write \"{pages,components}/**/*.{ts,tsx,json,scss,md}\" && yarn prettier:root",
+    "prettier:root": "prettier -c --write \"*.{md,json,env}\"",
     "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "pages/**/*.{ts,tsx,json,scss,md}": "prettier -c --write",
+    "components/**/*.{ts,tsx,json,scss,md}": "prettier -c --write",
+    "*.{json,md}": "prettier -c --write"
   },
   "dependencies": {
     "@types/node": "18.11.9",
@@ -25,6 +32,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5"
   }
