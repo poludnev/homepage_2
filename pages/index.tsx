@@ -13,5 +13,5 @@ export default function Home() {
         <h1 className={styles.h1}>timid steps</h1>
       </main>
     </div>
-  )
+  );
 }
