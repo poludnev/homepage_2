@@ -4,9 +4,9 @@ const buildEslintCommand = (filenames) => [
   `next lint --fix --file ${filenames
     .map((f) => path.relative(process.cwd(), f))
     .join(' --file ')} `,
-  `prettier --write "pages/**/${filenames}"`,
-  `prettier --write "components/**/${filenames}"`,
-  `prettier --write "*.{json,md}"`,
+  `prettier --write "pages/**/*.{ts,tsx,json,scss,md}"`,
+  // `prettier --write "components/**/*.{ts,tsx,json,scss,md}"`,
+  `prettier --write "*.{js,json,md}"`,
 ];
 
 module.exports = {
