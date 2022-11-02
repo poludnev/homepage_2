@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/index.module.scss'
+import styles from '../styles/index.module.scss';
 
 export default function Home() {
   return (
@@ -13,5 +13,5 @@ export default function Home() {
         <h1 className={styles.h1}>timid steps</h1>
       </main>
     </div>
-  )
+  );
 }
