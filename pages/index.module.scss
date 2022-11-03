@@ -1,9 +1,14 @@
 .container {
+  background-color: var(--color-dark);
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  //   url(../public/img/bg-pic-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 144rem;
   margin: 0 auto;
   padding: 10rem;
 }
