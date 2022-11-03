@@ -13,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={styles.h1}>{t('title')}</h1>
+        <h1 aria-level={1} className={styles.h1}>
+          {t('title')}
+        </h1>
         <p className={styles.paragraph}>{t('disclaimer')}</p>
       </main>
     </div>
