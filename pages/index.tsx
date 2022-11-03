@@ -1,7 +1,10 @@
 import Head from 'next/head';
+
+import { useTranslation } from 'react-i18next';
 import styles from './index.module.scss';
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <Head>
@@ -10,12 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={styles.h1}>timid steps</h1>
-        <p className={styles.paragraph}>
-          One old Chinese said, &quot;A journey of a thousand miles begins with
-          a single step&quot;. My journey started some time ago with a timid
-          step and there is no end in sight.
-        </p>
+        <h1 aria-level={1} className={styles.h1}>
+          {t('title')}
+        </h1>
+        <p className={styles.paragraph}>{t('disclaimer')}</p>
       </main>
     </div>
   );
