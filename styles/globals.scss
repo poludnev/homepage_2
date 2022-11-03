@@ -1,3 +1,12 @@
+:root {
+  --font-primary: 1.5rem;
+  --mb-lg: 8rem;
+  --color-dark: #212529;
+  --color-white: #fff;
+  --bp-largest: 87.5em; // 1400 px
+  --bp-large: 68.75em; // 1100 px
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +16,17 @@
 html {
   font-size: 65.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: var(--bp-largest)) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: var(--bp-large)) {
+    font-size: 42%;
+  }
 }
 body {
   font-family: sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-white);
 }
