@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/index.module.scss';
+import styles from './index.module.scss';
 
 export default function Home() {
   return (
@@ -9,8 +9,13 @@ export default function Home() {
         <meta name="description" content="Roman's Homepage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
         <h1 className={styles.h1}>timid steps</h1>
+        <p className={styles.paragraph}>
+          One old Chinese said, &quot;A journey of a thousand miles begins with
+          a single step&quot;. My journey started some time ago with a timid
+          step and there is no end in sight.
+        </p>
       </main>
     </div>
   );
