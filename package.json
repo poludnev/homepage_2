@@ -10,7 +10,8 @@
     "prettier": "prettier -c --write \"{pages,components}/**/*.{ts,tsx,json,scss,md}\" && yarn prettier:root",
     "prettier:root": "prettier -c --write \"*.{md,json,env}\"",
     "postinstall": "husky install",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:dev": "jest --watch"
   },
   "lint-staged": {
     "pages/**/*.{ts,tsx,json,scss,md}": "prettier -c --write",
