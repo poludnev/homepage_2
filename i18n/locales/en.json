@@ -1,4 +1,13 @@
 {
   "title": "timid steps",
-  "disclaimer": "One old Chinese said, \"A journey of a thousand miles begins with a single step\". My journey started some time ago with a timid step and there is no end in sight."
+  "disclaimer": {
+    "s1": "One old Chinese said, \"A journey of a thousand miles begins with a single step\".",
+    "s2": "My journey started some time ago with a timid step and there is no end in sight."
+  },
+  "mainNav": {
+    "blog": "blog",
+    "projects": "projects",
+    "about": "about",
+    "cv": "cv"
+  }
 }

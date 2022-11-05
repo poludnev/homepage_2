@@ -1,8 +1,10 @@
 :root {
   --font-primary: 1.5rem;
   --mb-lg: 8rem;
+  --mb-md: 4rem;
   --color-dark: #212529;
   --color-white: #fff;
+  --color-grey: #495057;
   --bp-largest: 87.5em; // 1400 px
   --bp-large: 68.75em; // 1100 px
 }
@@ -26,7 +28,5 @@ html {
   }
 }
 body {
-  font-family: sans-serif;
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  font-family: 'Roboto', sans-serif;
 }
