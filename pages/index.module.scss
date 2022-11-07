@@ -44,6 +44,7 @@
   animation-duration: 3s;
   animation-timing-function: ease-in;
   animation-fill-mode: backwards;
+  margin-top: auto;
 }
 
 .paragraph {
@@ -74,7 +75,7 @@
 }
 
 .nav {
-  margin-bottom: var(--mb-lg);
+  padding: 4rem;
   &__list {
     list-style: none;
     display: flex;
@@ -109,8 +110,6 @@
   color: var(--color-white);
   color: rgba(#fff, 0.3);
 
-  // cursor: not-allowed;
-
   &:link,
   &:visited {
     cursor: pointer;
@@ -127,9 +126,8 @@
 }
 
 .media {
-  position: absolute;
-  bottom: 0;
   padding: 5rem;
+  margin-top: auto;
   &__list {
     list-style: none;
     display: flex;
@@ -143,19 +141,14 @@
     height: 35px;
     fill: rgba(#adb5bd, 0.8);
     stroke: rgba(#adb5bd, 0.8);
-    // fill: var(--color-white);
-    // stroke: var(--color-white);
     transition: all 0.4s;
   }
 
   &__list_item {
     border-radius: 50%;
-    // width: 45px;
-    // height: 45px;
     animation-name: moveInUp;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-    // animation-delay: 0.5s;
     animation-fill-mode: backwards;
 
     &:nth-child(1) {
@@ -183,7 +176,6 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    // box-shadow: 0 1rem 1rem #fff;
   }
   &__list_link {
     &:link,

@@ -9,5 +9,10 @@
     "projects": "projects",
     "about": "about",
     "cv": "cv"
+  },
+  "comingSoon": {
+    "p1-1": "Here is going to be a new",
+    "p1-2": "page soon.",
+    "p2-1": "Waiting for you to come again later."
   }
 }
