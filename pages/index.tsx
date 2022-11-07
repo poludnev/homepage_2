@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 import { getRandomOfSix } from '../utils';
 import styles from './index.module.scss';
+import Link from 'next/link';
 
 export default function Home(): JSX.Element {
   const { t } = useTranslation();
@@ -52,24 +53,24 @@ export default function Home(): JSX.Element {
         <nav className={styles.nav}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/blog" className={styles.navlink}>
                 {t('mainNav.blog')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/projects" className={styles.navlink}>
                 {t('mainNav.projects')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/cv" className={styles.navlink}>
                 {t('mainNav.cv')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/about" className={styles.navlink}>
                 {t('mainNav.about')}
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
