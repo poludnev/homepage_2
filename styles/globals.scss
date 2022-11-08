@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=optional);
-@import url(https://fonts.googleapis.com/css2?family=RocknRoll+One&display=optional);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=RocknRoll+One&display=swap');
+
 :root {
   --font-primary: 1.5rem;
   --mb-lg: 8rem;
@@ -31,5 +31,5 @@ html {
   }
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
