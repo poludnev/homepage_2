@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  max-height: 100vh;
+  min-height: 100vh;
 
   margin: 0 auto;
 }
@@ -31,12 +31,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
+  overflow: hidden;
 }
 
 .h1 {
-  font-size: 16rem;
-  margin-bottom: var(--mb-md);
   font-family: 'RocknRoll One', sans-serif;
+  font-size: 14rem;
+  margin-bottom: var(--mb-md);
   text-transform: capitalize;
   text-align: center;
   animation-name: fadein;
@@ -44,16 +46,74 @@
   animation-duration: 3s;
   animation-timing-function: ease-in;
   animation-fill-mode: backwards;
+  margin-top: auto;
+
+  @media only screen and (max-height: 25rem) {
+    // 480 px
+    font-size: 10rem;
+  }
+
+  @media only screen and (max-width: 35em) {
+    max-width: 80rem;
+  }
+
+  @media only screen and (max-width: 22.5em) {
+    font-size: 18rem;
+  }
+
+  @media only screen and (max-height: 20rem) {
+    max-width: initial;
+  }
 }
 
 .paragraph {
-  font-size: var(--font-primary);
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+
   text-align: center;
   font-weight: 400;
   letter-spacing: 4px;
   max-width: 85rem;
   line-height: 3rem;
   margin: 0 auto var(--mb-md);
+
+  @media only screen and (max-height: 37.5rem) {
+    margin-bottom: var(--mb-sm);
+  }
+
+  @media only screen and (max-width: 65.75em) {
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+  }
+
+  @media only screen and (max-width: 47.5em) {
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 35em) {
+    font-size: 2.2rem;
+    max-width: 55rem;
+    line-height: 4rem;
+    span {
+      padding: 1.5rem 0;
+    }
+  }
+
+  @media only screen and (max-width: 22.5em) {
+    font-size: 3.2rem;
+    line-height: 5rem;
+  }
+
+  @media only screen and (max-width: 21em) {
+    max-width: 78rem;
+  }
+
+  @media only screen and (max-height: 20rem) {
+    max-width: initial;
+    font-size: 3.2rem;
+    margin-bottom: var(--mb-lg);
+  }
 
   span:first-child {
     display: block;
@@ -74,13 +134,35 @@
 }
 
 .nav {
-  margin-bottom: var(--mb-lg);
+  padding: 4rem;
+  @media only screen and (max-height: 37.5rem) {
+    padding: 2rem;
+  }
   &__list {
     list-style: none;
     display: flex;
     gap: 5rem;
     justify-content: center;
     font-size: 2.4rem;
+
+    @media only screen and (max-width: 35em) {
+      flex-direction: column;
+      align-items: center;
+      font-size: 3.6rem;
+      letter-spacing: 6px;
+      gap: 3rem;
+    }
+
+    @media only screen and (max-width: 22.5em) {
+      font-size: 6rem;
+      gap: 5rem;
+    }
+
+    @media only screen and (max-height: 20rem) {
+      flex-direction: row;
+      font-size: 6rem;
+      gap: 6rem;
+    }
 
     &_item {
       text-transform: uppercase;
@@ -109,8 +191,6 @@
   color: var(--color-white);
   color: rgba(#fff, 0.3);
 
-  // cursor: not-allowed;
-
   &:link,
   &:visited {
     cursor: pointer;
@@ -127,15 +207,23 @@
 }
 
 .media {
-  position: absolute;
-  bottom: 0;
-  padding: 5rem;
+  padding: 8rem;
+  margin-top: auto;
+
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-top: auto;
+
+    @media only screen and (max-width: 47.5em) {
+      gap: 3.5rem;
+    }
+
+    @media only screen and (max-width: 22.5em) {
+      gap: 1.8rem;
+    }
   }
 
   &__list_icon {
@@ -143,38 +231,38 @@
     height: 35px;
     fill: rgba(#adb5bd, 0.8);
     stroke: rgba(#adb5bd, 0.8);
-    // fill: var(--color-white);
-    // stroke: var(--color-white);
     transition: all 0.4s;
+
+    @media only screen and (max-width: 35em) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__list_item {
     border-radius: 50%;
-    // width: 45px;
-    // height: 45px;
     animation-name: moveInUp;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-    // animation-delay: 0.5s;
     animation-fill-mode: backwards;
 
     &:nth-child(1) {
-      animation-delay: 0.5s;
+      animation-delay: 0.4s;
     }
     &:nth-child(3) {
-      animation-delay: 0.6s;
+      animation-delay: 0.5s;
     }
     &:nth-child(6) {
-      animation-delay: 0.7s;
+      animation-delay: 0.6s;
     }
     &:nth-child(4) {
-      animation-delay: 0.8s;
+      animation-delay: 0.7s;
     }
     &:nth-child(2) {
-      animation-delay: 0.9s;
+      animation-delay: 0.8s;
     }
     &:nth-child(5) {
-      animation-delay: 1s;
+      animation-delay: 0.9s;
     }
   }
 
@@ -183,7 +271,11 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    // box-shadow: 0 1rem 1rem #fff;
+
+    @media only screen and (max-width: 35em) {
+      width: 30px;
+      height: 30px;
+    }
   }
   &__list_link {
     &:link,
@@ -206,6 +298,11 @@
         z-index: -1;
         opacity: 0;
         transition: border-color 0.3s, top 0.3s, left 0.3s;
+
+        @media only screen and (max-width: 35em) {
+          width: 28px;
+          height: 28px;
+        }
       }
     }
 
@@ -273,7 +370,7 @@
 
 @keyframes moveInUp {
   0% {
-    transform: translateY(10rem);
+    transform: translateY(8rem);
     opacity: 0;
   }
 

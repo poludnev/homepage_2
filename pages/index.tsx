@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 import { getRandomOfSix } from '../utils';
 import styles from './index.module.scss';
+import Link from 'next/link';
 
 export default function Home(): JSX.Element {
   const { t } = useTranslation();
@@ -52,24 +53,24 @@ export default function Home(): JSX.Element {
         <nav className={styles.nav}>
           <ul className={styles.nav__list}>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/blog" className={styles.navlink}>
                 {t('mainNav.blog')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/projects" className={styles.navlink}>
                 {t('mainNav.projects')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/cv" className={styles.navlink}>
                 {t('mainNav.cv')}
-              </a>
+              </Link>
             </li>
             <li className={styles.nav__list_item}>
-              <a href="#" className={styles.navlink}>
+              <Link href="/about" className={styles.navlink}>
                 {t('mainNav.about')}
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -83,35 +84,60 @@ export default function Home(): JSX.Element {
               </a>
             </li>
             <li className={styles.media__list_item}>
-              <a href="#" className={styles.media__list_link}>
+              <a
+                href="https://www.instagram.com/poludnev.roman/"
+                rel="noreferrer"
+                target="_blank"
+                className={styles.media__list_link}
+              >
                 <svg className={styles.media__list_icon}>
                   <use xlinkHref="img/logos/sprite.svg#icon-insta-round"></use>
                 </svg>
               </a>
             </li>
             <li className={styles.media__list_item}>
-              <a href="#" className={styles.media__list_link}>
+              <a
+                href="https://linkedin.com/in/roman-poludnev-0b3592a7"
+                rel="noreferrer"
+                target="_blank"
+                className={styles.media__list_link}
+              >
                 <svg className={styles.media__list_icon}>
                   <use xlinkHref="img/logos/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
             <li className={styles.media__list_item}>
-              <a href="#" className={styles.media__list_link}>
+              <a
+                href="https://twitter.com/Roman71439308"
+                rel="noreferrer"
+                target="_blank"
+                className={styles.media__list_link}
+              >
                 <svg className={styles.media__list_icon}>
                   <use xlinkHref="img/logos/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li className={styles.media__list_item}>
-              <a href="#" className={styles.media__list_link}>
+              <a
+                href="https://www.facebook.com/poludnev.roman"
+                rel="noreferrer"
+                target="_blank"
+                className={styles.media__list_link}
+              >
                 <svg className={styles.media__list_icon}>
                   <use xlinkHref="img/logos/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li className={styles.media__list_item}>
-              <a href="#" className={styles.media__list_link}>
+              <a
+                href="https://github.com/poludnev?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.media__list_link}
+              >
                 <svg className={styles.media__list_icon}>
                   <use xlinkHref="img/logos/sprite.svg#icon-github"></use>
                 </svg>

@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=RocknRoll+One&display=swap');
+
 :root {
   --font-primary: 1.5rem;
   --mb-lg: 8rem;
   --mb-md: 4rem;
+  --mb-sm: 2rem;
   --color-dark: #212529;
+  --color-grey-darkest: #343a40;
   --color-white: #fff;
   --color-grey: #495057;
   --bp-largest: 87.5em; // 1400 px
@@ -18,15 +22,43 @@
 html {
   font-size: 65.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 
-  @media only screen and (max-width: var(--bp-largest)) {
-    font-size: 50%;
+  @media only screen and (max-height: 44.5em) {
+    // 712 px
+    font-size: 45%;
   }
 
-  @media only screen and (max-width: var(--bp-large)) {
-    font-size: 42%;
+  @media only screen and (max-height: 30rem) {
+    // 480 px
+    font-size: 35%;
+  }
+
+  @media only screen and (max-width: 65.75em) {
+    // 1052 pz
+    font-size: 45%;
+  }
+
+  @media only screen and (max-width: 47.5em) {
+    // 760 px
+    font-size: 35%;
+  }
+
+  @media only screen and (max-width: 22.5em) {
+    // 360 px
+    font-size: 25%;
+  }
+
+  @media only screen and (max-width: 21em) {
+    // 336px
+    font-size: 20%;
+  }
+
+  @media only screen and (max-height: 20rem) {
+    // 320 px
+    font-size: 20%;
   }
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
