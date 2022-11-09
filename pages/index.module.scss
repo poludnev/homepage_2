@@ -3,14 +3,7 @@
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  // min-height: 100vh;
-
-  min-height: calc(var(--vh, 1vh) * 100);
-
-  // @supports (-webkit-touch-callout: none) {
-  //   min-height: -webkit-fill-available;
-  // }
-
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -103,11 +96,7 @@
   @media only screen and (max-width: 35em) {
     font-size: 2.2rem;
     max-width: 55rem;
-    // line-height: 4rem;
     margin-bottom: var(--mb-md);
-    span {
-      // padding: 1.5rem 0;
-    }
   }
 
   @media only screen and (max-width: 22.5em) {
@@ -155,7 +144,7 @@
   &__list {
     list-style: none;
     display: flex;
-    // gap: 5rem;
+
     justify-content: center;
     font-size: 2.4rem;
 
@@ -167,7 +156,6 @@
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
-      // gap: 3rem;
     }
 
     @media only screen and (max-width: 22.5em) {
@@ -193,8 +181,6 @@
       }
 
       @media only screen and (max-height: 20rem) {
-        // flex-direction: row;
-        // font-size: 6rem;
         margin-right: 6rem;
       }
 
@@ -256,7 +242,7 @@
     margin-top: auto;
 
     @media only screen and (max-width: 47.5em) {
-      margin-bottom: 5rem;
+      margin-bottom: 15rem;
     }
   }
 

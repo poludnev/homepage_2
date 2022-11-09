@@ -10,15 +10,22 @@ import styles from './index.module.scss';
 import Link from 'next/link';
 
 export default function Home(): JSX.Element {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    new Parallax(containerRef.current!, {
-      originX: 0,
-      originY: 0,
-    });
+    if (!!containerRef.current && window.innerWidth >= 768) {
+      new Parallax(containerRef.current!, {
+        originX: 0,
+        originY: 0,
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
   }, []);
 
   return (
@@ -28,13 +35,15 @@ export default function Home(): JSX.Element {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg-pic-${getRandomOfSix()}.jpeg)`,
       }}
     >
-      <div ref={containerRef} className={styles.background}>
-        <img
-          src={`img/bg-pic-${getRandomOfSix()}.jpeg`}
-          data-depth="0.05"
-          alt="some of background images"
-        />
-      </div>
+      {!isMobile && (
+        <div ref={containerRef} className={styles.background}>
+          <img
+            src={`img/bg-pic-${getRandomOfSix()}.jpeg`}
+            data-depth="0.05"
+            alt="some of background images"
+          />
+        </div>
+      )}
       <Head>
         <title>Roman&apos;s Homepage</title>
         <meta name="description" content="Roman's Homepage" />
