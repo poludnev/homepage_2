@@ -5,6 +5,10 @@
   color: var(--color-white);
   min-height: 100vh;
 
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+
   margin: 0 auto;
 }
 
