@@ -32,13 +32,13 @@ export default function Home(): JSX.Element {
     <div
       className={styles.container}
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg-pic-${getRandomOfSix()}.jpeg)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg-pic-${getRandomOfSix()}.webp)`,
       }}
     >
       {!isMobile && (
         <div ref={containerRef} className={styles.background}>
           <img
-            src={`img/bg-pic-${getRandomOfSix()}.jpeg`}
+            src={`img/bg-pic-${getRandomOfSix()}.webp`}
             data-depth="0.05"
             alt="some of background images"
           />
