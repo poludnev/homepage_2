@@ -38,11 +38,12 @@
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  overflow: hidden;
 }
 
 .h1 {
   font-family: 'RocknRoll One', sans-serif;
-  font-size: 15rem;
+  font-size: 14rem;
   margin-bottom: var(--mb-md);
   text-transform: capitalize;
   text-align: center;
@@ -53,6 +54,11 @@
   animation-fill-mode: backwards;
   margin-top: auto;
 
+  @media only screen and (max-height: 25rem) {
+    // 480 px
+    font-size: 10rem;
+  }
+
   @media only screen and (max-width: 35em) {
     max-width: 80rem;
     font-size: 8rem;
@@ -61,7 +67,7 @@
   }
 
   @media only screen and (max-width: 22.5em) {
-    font-size: 20rem;
+    font-size: 18rem;
   }
 
   @media only screen and (max-height: 20rem) {
@@ -79,11 +85,12 @@
   max-width: 85rem;
   line-height: 3rem;
   margin: 0 auto var(--mb-md);
+
   @media only screen and (max-height: 37.5rem) {
     margin-bottom: var(--mb-sm);
   }
 
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 65.75em) {
     letter-spacing: 2px;
     font-size: 1.6rem;
   }
@@ -410,7 +417,7 @@
 
 @keyframes moveInUp {
   0% {
-    transform: translateY(5rem);
+    transform: translateY(8rem);
     opacity: 0;
   }
 
