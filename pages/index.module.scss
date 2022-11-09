@@ -5,9 +5,11 @@
   color: var(--color-white);
   min-height: 100vh;
 
-  @supports (-webkit-touch-callout: none) {
-    min-height: -webkit-fill-available;
-  }
+  // min-height: calc(var(--vh, 1vh) * 100);
+
+  // @supports (-webkit-touch-callout: none) {
+  //   min-height: -webkit-fill-available;
+  // }
 
   margin: 0 auto;
 }
@@ -54,6 +56,7 @@
   @media only screen and (max-width: 35em) {
     max-width: 80rem;
     font-size: 8rem;
+    margin-top: 0;
     margin-bottom: var(--mb-sm);
   }
 
@@ -145,7 +148,7 @@
   &__list {
     list-style: none;
     display: flex;
-    gap: 5rem;
+    // gap: 5rem;
     justify-content: center;
     font-size: 2.4rem;
 
@@ -154,7 +157,10 @@
       align-items: center;
       font-size: 3.6rem;
       letter-spacing: 6px;
-      gap: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      // gap: 3rem;
     }
 
     @media only screen and (max-width: 22.5em) {
@@ -175,6 +181,22 @@
       animation-timing-function: ease-out;
 
       animation-fill-mode: backwards;
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+
+      @media only screen and (max-height: 20rem) {
+        // flex-direction: row;
+        // font-size: 6rem;
+        margin-right: 6rem;
+      }
+
+      @media only screen and (max-width: 35em) {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+        }
+      }
       &:nth-child(1) {
         animation-delay: 0s;
       }
@@ -215,6 +237,7 @@
   margin-top: auto;
 
   @media only screen and (max-width: 35em) {
+    margin-top: 20rem;
     padding-top: 0;
   }
 
@@ -230,7 +253,7 @@
     }
 
     @media only screen and (max-width: 22.5em) {
-      gap: 1.8rem;
+      // gap: 1.8rem;
     }
   }
 
@@ -253,6 +276,15 @@
     animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    @media only screen and (max-width: 47.5em) {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
 
     &:nth-child(1) {
       animation-delay: 0.4s;
