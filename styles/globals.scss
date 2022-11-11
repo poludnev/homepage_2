@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=RocknRoll+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=RocknRoll+One&family=Ubuntu:wght@300;400&display=swap');
 :root {
   --font-primary: 1.5rem;
   --mb-lg: 8rem;
@@ -9,6 +8,9 @@
   --color-grey-darkest: #343a40;
   --color-white: #fff;
   --color-grey: #495057;
+  --color-grey-lighter: #868e96;
+  --color-grey-lightest: #f1f3f5;
+  --color-cyan-darkest: #0b7285
   --bp-largest: 87.5em; // 1400 px
   --bp-large: 68.75em; // 1100 px
 }
@@ -20,7 +22,7 @@
 }
 
 html {
-  font-size: 65.5%;
+  font-size: 62.5%;
   -webkit-text-size-adjust: none;
   box-sizing: border-box;
   overflow-x: hidden;

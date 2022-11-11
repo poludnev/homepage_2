@@ -14,5 +14,19 @@
     "p1-1": "Here is going to be a new",
     "p1-2": "page soon.",
     "p2-1": "Waiting for you to come again later."
+  },
+  "resume": {
+    "name": "roman",
+    "surname": "poludnev",
+    "position": "front-end react developer",
+    "phone": { "key": "phone", "data": "+90 507 847 5513" },
+    "email": { "key": "email", "data": "poludnev.roman@gmail.com" },
+    "address": { "key": "address", "data": "bahçelievler, istanbul, turkey" },
+    "sections": {
+      "about": { "title": "about" },
+      "skills": { "title": "skills" },
+      "experience": { "title": "experience" },
+      "education": { "title": "education" }
+    }
   }
 }

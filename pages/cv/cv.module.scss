@@ -1,3 +1,234 @@
 .container {
-  height: 100vh;
+  min-height: 100vh; // TODO: delete after tests
+  // background-color: aqua;
+  background-color: #fcfcf9;
+  // display: flex;
+  // justify-content: center;
+  color: var(--color-dark);
+}
+
+.h1 {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  // padding-top: 1.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.h2 {
+  font-family: Inter, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 1.2rem;
+}
+
+.h3 {
+  font-family: Inter, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.5rem;
+  color: var(--color-cyan-darkest);
+}
+
+.paragraph {
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+}
+.content {
+  background-color: var(--color-white);
+  box-shadow: 0 0 1rem 0.2rem rgba(#000000, 0.05);
+  min-height: 100vh; // TODO: delete after test;
+  margin: auto;
+  width: 80rem;
+  padding: 2rem;
+}
+
+.header {
+  // background-color: aqua;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: repeat(3, max-content);
+  column-gap: 2rem;
+  border-bottom: 1px solid rgba(#000, 0.1);
+
+  &__avatar_container {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--color-white);
+    grid-row: 1 / -1;
+    box-shadow: 0 0 5px rgba(#000, 0.1);
+  }
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 2rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+
+  padding: 0.5rem 0;
+
+  & > * {
+    padding: 0.3rem;
+  }
+
+  &__data {
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+  }
+
+  &__data_address {
+    text-transform: capitalize;
+  }
+
+  &__title {
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--color-grey-lighter);
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.main {
+  // height: 80vh;
+  padding: 2rem 0;
+
+  > * {
+    padding: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .section_about {
+    // background-color: aquamarine;
+    // height: 40rem;
+  }
+  .section_skills {
+    // background-color: rgb(255, 127, 200);
+    // height: 4rem;
+  }
+  .section_experience {
+    // height: 4rem;
+    .history {
+      // background-color: rgb(191, 255, 127);
+      display: grid;
+      grid-template-columns: 20rem 1fr;
+      // row-gap: 1rem;
+      .timeline {
+        font-family: Roboto, sans-serif;
+        font-size: 1.6rem;
+        align-self: center;
+        align-content: center;
+        position: relative;
+        height: 100%;
+        padding-left: 2rem;
+        // padding-top: 50%;
+
+        &::before {
+          content: '';
+          content: '';
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background-color: var(--color-grey-lighter);
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: 1;
+          transform: translateY(-50%);
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0.4rem;
+          content: '';
+          width: 0.2rem;
+          height: 100%;
+          background-color: var(--color-grey-lightest);
+
+          display: block;
+        }
+
+        &:first-child::before {
+          background-color: var(--color-white);
+          border: 3px solid var(--color-grey-lighter);
+          box-sizing: border-box;
+        }
+
+        &:first-child::after {
+          background-color: transparent;
+          background-image: linear-gradient(
+            transparent 20%,
+            // transparent 50%,
+            var(--color-grey-lightest) 50%,
+            var(--color-grey-lightest) 100%
+          );
+        }
+
+        &_start {
+          &::after {
+            background-color: transparent;
+            background-image: linear-gradient(
+              var(--color-grey-lightest) 0%,
+              var(--color-grey-lightest) 50%,
+              // transparent 50%,
+              transparent 80%
+            );
+          }
+        }
+
+        .time {
+          position: relative;
+          transform: translateY(-50%);
+          top: 50%;
+          padding: 1rem;
+          // background-color: bisque;
+        }
+      }
+
+      .timeline:nth-last-child(1) {
+        background-color: aqua;
+      }
+
+      .job {
+        font-family: Roboto, sans-serif;
+        font-size: 1.6rem;
+        padding: 1rem;
+      }
+    }
+  }
+  .section_education {
+    // background-color: rgb(191, 255, 127);
+    // height: 4rem;
+  }
+}
+
+.footer {
+  // background-color: orange;
 }
